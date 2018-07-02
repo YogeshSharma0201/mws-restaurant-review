@@ -52,10 +52,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   flex-wrap: wrap;
   border: 1px solid #777;
 }
-#breadcrumb {
-  max-width: 1200px;
-  margin: auto;
-}
+
 #footer {
   background-color: #444;
   color: #aaa;
@@ -87,9 +84,10 @@ nav h1 a {
     padding: 16px 40px;
     list-style: none;
     background-color: #eee;
-    margin: 0;
     border-right: 1px solid #777;
     border-left: 1px solid #777;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Display list items side by side */
