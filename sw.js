@@ -1,4 +1,4 @@
-const staticCacheName = 'restaurant-static-001';
+const staticCacheName = 'restaurant-static-002';
 
 
 self.addEventListener('install', event => {
@@ -23,7 +23,7 @@ self.addEventListener('install', event => {
           '/restaurant.html?id=8',
           '/restaurant.html?id=9',
           '/restaurant.html?id=10',
-          '/img/no-internet-connection.png'
+          '/img/no-internet-connection.png',
         ]).catch(error => {
           console.log('Caches open failed: ' + error);
         });
