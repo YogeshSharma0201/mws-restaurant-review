@@ -110,7 +110,7 @@ nav h1 a:hover {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: #044e8e;
     text-decoration: none;
     border-bottom: 1px dotted #d85b5b;
 }
@@ -200,6 +200,19 @@ nav h1 a:hover {
     margin: 0 20px;
     height: 150px;
 }
+
+@media screen and (max-width: 1100px) {
+    #restaurants-list li {
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #restaurants-list li {
+        width: 300px;
+    }
+}
+
 #restaurants-list li h1 {
     color: #804705;
     font-family: Arial,sans-serif;
@@ -287,6 +300,22 @@ nav h1 a:hover {
     padding: 0;
     width: 62%;
 }
+
+@media screen and (max-width: 1024px) {
+    #restaurant-container {
+        width: 45%;
+    }
+    #reviews-container {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #restaurant-container, #reviews-container {
+        width: 50%;
+    }
+}
+
 #reviews-container h2 {
     margin-top: 29px;
     color: #a25b06;
@@ -316,16 +345,11 @@ nav h1 a:hover {
 }
 #reviews-list li p:nth-of-type(2) {
     float: right;
-    /* color: #d85b5b; */
-    /* color: green; */
     font-weight: bold;
 }
 #reviews-list li p:nth-of-type(3) {
     clear: both;
-    /* color: #d85b5b; */
-    /* color: #0ca50c; */
     color: 008800;
-    /* font-weight: bold; */
 }
 #reviews-list li p:nth-of-type(3)[data-rating="3"] {
     color: #333;
@@ -344,32 +368,6 @@ nav h1 a:hover {
     vertical-align: top;
 }
 
-@media screen and (max-width: 1100px) {
-    #restaurants-list li {
-        width: 270px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    #restaurant-container {
-        width: 45%;
-    }
-    #reviews-container {
-        width: 55%;
-    }
-}
-
-@media screen and (max-width: 950px) {
-    #restaurants-list li {
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #restaurant-container, #reviews-container {
-        width: 50%;
-    }
-}
 
 @media screen and (min-width: 650px) and (max-width: 768px) {
     #restaurants-list li {
