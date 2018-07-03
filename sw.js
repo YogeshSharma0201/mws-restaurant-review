@@ -34,7 +34,6 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    // Add cache.put to cache images on each fetch
     caches.match(event.request).then(response => {
       return response || fetch(event.request).then(fetchResponse => {
         return caches.open(staticCacheName).then(cache => {
