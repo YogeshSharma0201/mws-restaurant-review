@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/YogeshSharma0201/mws-restaurant-stage-1#readme",
   "dependencies": {
-    "grunt-responsive-images": "^1.10.1"
+    "browser-sync": "^2.24.5",
+    "grunt-responsive-images": "^1.10.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "idb": "^2.1.3"
   }
 }

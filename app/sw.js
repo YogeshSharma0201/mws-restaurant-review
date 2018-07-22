@@ -1,4 +1,4 @@
-const staticCacheName = 'restaurant-static-002';
+const staticCacheName = 'restaurant-static-006';
 
 
 self.addEventListener('install', event => {
@@ -11,7 +11,6 @@ self.addEventListener('install', event => {
           '/js/dbhelper.js',
           '/js/main.js',
           '/js/restaurant_info.js',
-          '/data/restaurants.json',
           '/restaurant.html?id=1',
           '/restaurant.html?id=2',
           '/restaurant.html?id=3',
@@ -34,12 +33,7 @@ self.addEventListener('install', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request).then(response => {
-      return response || fetch(event.request).then(fetchResponse => {
-        return caches.open(staticCacheName).then(cache => {
-          cache.put(event.request, fetchResponse.clone());
-          return fetchResponse;
-        });
-      });
+      return response || fetch(event.request);
     }).catch(error => {
       if (event.request.url.includes('.jpg')) {
         return caches.match('/img/no-internet-connection.png');

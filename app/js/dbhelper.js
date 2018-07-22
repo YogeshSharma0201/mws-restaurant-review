@@ -8,8 +8,8 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 8000; // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    const port = 1337; // Change this to your server port
+    return `http://localhost:${port}/restaurants`;
   }
 
   /**
@@ -21,10 +21,61 @@ class DBHelper {
     xhr.onload = () => {
       if (xhr.status === 200) { // Got a success response from server!
         const json = JSON.parse(xhr.responseText);
-        const restaurants = json.restaurants;
+        let restaurants = json;
+        restaurants = restaurants.map((restaurant) => {
+          const id = restaurant.id;
+          return {
+            ...restaurant,
+            photograph: `${id}-300.jpg`,
+            srcset_index: `img/${id}-300.jpg 1x, img/${id}-600_2x.jpg 2x`,
+            srcset_restaurant: `img/${id}-300.jpg 300w, img/${id}-400.jpg 400w, img/${id}-600_2x.jpg 600w, img/${id}-800_2x.jpg 800w`
+          };
+        });
+
+        let dbPromise = idb.open('restaurants', 1, function (upgradeDB) {
+          let keyValStore = upgradeDB.createObjectStore('restaurants', {
+            keyPath: 'id'
+          });
+          keyValStore.createIndex('by-id', 'id');
+        });
+
+        dbPromise.then(function (db) {
+          let tx = db.transaction('restaurants', 'readwrite');
+          let keyValStore = tx.objectStore('restaurants');
+          // keyValStore.put('foo', 'bar');
+          restaurants.forEach((restaurant) => {
+            keyValStore.put(restaurant);
+          });
+
+          return tx.complete;
+        }).then(function () {
+          console.log('tx complete');
+        });
+
+        // dbPromise.then(function (db) {
+        //   let tx = db.transaction('restaurants');
+        //   let keyValStore = tx.objectStore('restaurants');
+        //   console.log(keyValStore);
+        //   return keyValStore.get('hello');
+        // }).then(function (val) {
+        //   console.log(val);
+        // });
+
         callback(null, restaurants);
       } else { // Oops!. Got an error from server.
         const error = (`Request failed. Returned status of ${xhr.status}`);
+
+        let dbPromise = idb.open('restaurants', 1);
+
+        dbPromise.then(function (db) {
+          let tx = db.transaction('restaurants');
+          let keyValStore = tx.objectStore('restaurants');
+          console.log(keyValStore);
+          return keyValStore.getAll();
+        }).then(function (val) {
+          console.log(val);
+        });
+
         callback(error, null);
       }
     };
@@ -42,6 +93,7 @@ class DBHelper {
       } else {
         const restaurant = restaurants.find(r => r.id == id);
         if (restaurant) { // Got the restaurant
+          console.log(restaurant);
           callback(null, restaurant);
         } else { // Restaurant does not exist in the database
           callback('Restaurant does not exist', null);
