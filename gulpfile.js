@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
+let uglify = require('gulp-uglify-es').default;
+let cleanCSS = require('gulp-clean-css');
 
 const server = browserSync.create();
 
@@ -27,12 +28,14 @@ gulp.task('serve', ['sass', 'js', 'sw', 'img', 'html'], function() {
 gulp.task('sass', function() {
   return gulp.src("app/scss/*.scss")
     .pipe(sass())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
 });
 
 gulp.task('js', function() {
   return gulp.src("app/js/*.js")
+    .pipe(uglify())
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());
 });
