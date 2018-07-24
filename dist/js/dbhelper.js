@@ -7,9 +7,14 @@ class DBHelper {
    * Database URL.
    * Change this to restaurants.json file location on your server.
    */
-  static get DATABASE_URL() {
+  static get RESTAURANT_URL() {
     const port = 1337; // Change this to your server port
     return `http://localhost:${port}/restaurants`;
+  }
+
+  static get REVIEWS_URL() {
+    const port = 1337; // Change this to your server port
+    return `http://localhost:${port}/reviews`;
   }
 
   /**
@@ -17,7 +22,7 @@ class DBHelper {
    */
   static fetchRestaurants(callback) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', DBHelper.DATABASE_URL);
+    xhr.open('GET', DBHelper.RESTAURANT_URL);
     xhr.onload = () => {
       if (xhr.status === 200) { // Got a success response from server!
         const json = JSON.parse(xhr.responseText);
@@ -33,35 +38,65 @@ class DBHelper {
         });
 
         let dbPromise = idb.open('restaurants', 1, function (upgradeDB) {
-          let keyValStore = upgradeDB.createObjectStore('restaurants', {
+          let restuarantStore = upgradeDB.createObjectStore('restaurants', {
             keyPath: 'id'
           });
-          keyValStore.createIndex('by-id', 'id');
         });
 
-        dbPromise.then(function (db) {
-          let tx = db.transaction('restaurants', 'readwrite');
-          let keyValStore = tx.objectStore('restaurants');
-          // keyValStore.put('foo', 'bar');
-          restaurants.forEach((restaurant) => {
-            keyValStore.put(restaurant);
+        DBHelper.fetchReviews((err, reviews) => {
+          // console.log(reviews);
+          if(err) console.log(err);
+
+          const months = ["January", "February", "March", "April", "May", "June", "July", "August",
+            "September", "October", "November", "December"];
+
+          restaurants = restaurants.map((restaurant) => {
+            let r = [];
+            reviews.forEach((review) => {
+              if(review.restaurant_id === restaurant.id) {
+                let date = new Date(review.createdAt);
+                r = [
+                  {
+                    name : review.name,
+                    rating: review.rating,
+                    comments: review.comments,
+                    date: `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+                  },
+                  ...r
+                ];
+              }
+            });
+            restaurant.reviews = r;
+            // console.log(restaurant);
+            return restaurant;
           });
 
-          return tx.complete;
-        }).then(function () {
-          console.log('tx complete');
+          dbPromise.then(function (db) {
+            let tx = db.transaction('restaurants', 'readwrite');
+            let keyValStore = tx.objectStore('restaurants');
+            // keyValStore.put('foo', 'bar');
+            restaurants.forEach((restaurant) => {
+              keyValStore.put(restaurant);
+            });
+
+            return tx.complete;
+          }).then(function () {
+            console.log('tx complete');
+          });
+
+          // dbPromise.then(function (db) {
+          //   let tx = db.transaction('restaurants');
+          //   let keyValStore = tx.objectStore('restaurants');
+          //   console.log(keyValStore);
+          //   return keyValStore.get('hello');
+          // }).then(function (val) {
+          //   console.log(val);
+          // });
+
+          callback(null, restaurants);
+
         });
 
-        // dbPromise.then(function (db) {
-        //   let tx = db.transaction('restaurants');
-        //   let keyValStore = tx.objectStore('restaurants');
-        //   console.log(keyValStore);
-        //   return keyValStore.get('hello');
-        // }).then(function (val) {
-        //   console.log(val);
-        // });
-
-        callback(null, restaurants);
       } else { // Oops!. Got an error from server.
         const error = (`Request failed. Returned status of ${xhr.status}`);
 
@@ -73,8 +108,29 @@ class DBHelper {
           console.log(keyValStore);
           return keyValStore.getAll();
         }).then(function (val) {
-          console.log(val);
+          callback(null, val);
         });
+
+        callback(error, null);
+      }
+    };
+    xhr.send();
+  }
+
+  /**
+   * Fetch all reviews
+   */
+  static fetchReviews(callback) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', DBHelper.REVIEWS_URL);
+    xhr.onload = () => {
+      if (xhr.status === 200) { // Got a success response from server!
+        const json = JSON.parse(xhr.responseText);
+        let reviews = json;
+
+        callback(null, reviews);
+      } else { // Oops!. Got an error from server.
+        const error = (`Request failed. Returned status of ${xhr.status}`);
 
         callback(error, null);
       }
@@ -93,7 +149,6 @@ class DBHelper {
       } else {
         const restaurant = restaurants.find(r => r.id == id);
         if (restaurant) { // Got the restaurant
-          console.log(restaurant);
           callback(null, restaurant);
         } else { // Restaurant does not exist in the database
           callback('Restaurant does not exist', null);

@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
+var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 
 const server = browserSync.create();
@@ -47,7 +48,7 @@ gulp.task('sw', function () {
 });
 
 gulp.task('img', function() {
-  return gulp.src("app/img/*.jpg")
+  return gulp.src("app/img/*.*")
     .pipe(gulp.dest("dist/img"))
     .pipe(browserSync.stream());
 });

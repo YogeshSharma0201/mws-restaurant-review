@@ -2,98 +2,90 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bcd7fc-b9ed-484b-ba88-fdfb2ac95cf5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/js/idb-promised.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/10-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/10-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/10-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/10-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/2-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/2-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/2-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/2-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/3-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/3-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/3-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/3-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/4-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/4-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/4-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/4-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/5-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/5-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/5-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/5-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/6-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/6-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/6-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/6-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/7-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/7-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/7-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/7-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/8-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/8-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/8-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/8-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/9-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/9-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/9-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/9-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/no-internet-connection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/dbhelper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/restaurant_info.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/js/dbhelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/dbhelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/js/dbhelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/js/dbhelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../dist/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gulpfile.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-487403510">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="701" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="2" />
+          <entry key="json" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="701" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="43" column="48" selection-start-line="43" selection-end-line="44" />
+            <state relative-caret-position="36">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restaurant.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/restaurant.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-108">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#9#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/restaurant.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
               <caret line="65" column="90" selection-start-line="65" selection-start-column="90" selection-end-line="65" selection-end-column="90" />
@@ -101,26 +93,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbhelper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/dbhelper.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/js/restaurant_info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+            <state relative-caret-position="342">
+              <caret line="142" column="3" lean-forward="true" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
+              <folding>
+                <element signature="e#9#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sw.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/sw.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../data/restaurants.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="216">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idb-promised.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/idb-promised.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/js/dbhelper.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-171">
+              <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/sw.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../app/js/idb-promised.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
@@ -144,10 +157,11 @@
       <find>restaurant</find>
       <find>list</find>
       <find>#reviews-list li</find>
+      <find>fetchRestaurants</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -173,6 +187,9 @@
         <option value="$PROJECT_DIR$/app/restaurant.html" />
         <option value="$PROJECT_DIR$/app/js/dbhelper.js" />
         <option value="$PROJECT_DIR$/app/sw.js" />
+        <option value="$PROJECT_DIR$/../app/js/dbhelper.js" />
+        <option value="$PROJECT_DIR$/../app/sw.js" />
+        <option value="$PROJECT_DIR$/../gulpfile.js" />
       </list>
     </option>
   </component>
@@ -183,11 +200,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
+    <handled-path value="$PROJECT_DIR$/../node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/../package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -202,29 +219,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="mws-restaurant-stage-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="mws-restaurant-stage-1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mws-restaurant-stage-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="mws-restaurant-stage-1" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mws-restaurant-stage-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="mws-restaurant-stage-1" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
               <item name="mws-restaurant-stage-1" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="." type="b2602c69:ProjectViewProjectNode" />
+              <item name="mws-restaurant-stage-1" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,6 +284,7 @@
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -272,34 +301,36 @@
       <workItem from="1531567669100" duration="1301000" />
       <workItem from="1531634353638" duration="9440000" />
       <workItem from="1531656417499" duration="7747000" />
+      <workItem from="1532433355718" duration="9110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30787000" />
+    <option name="totallyTimeSpent" value="39897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33718246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24764891" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Grunt " order="3" side_tool="true" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3270142" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.328594" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.328594" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Grunt " order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3270142" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,25 +340,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/data/restaurants.json" />
-    <entry file="file://$USER_HOME$/Gruntfile.js" />
-    <entry file="file://$USER_HOME$/package.json" />
-    <entry file="file://$USER_HOME$/app/js/restaurant_info.js" />
-    <entry file="file://$USER_HOME$/app/scss/styles.scss" />
-    <entry file="file://$USER_HOME$/app/index.html" />
-    <entry file="file://$USER_HOME$/app/restaurant.html" />
-    <entry file="file://$USER_HOME$/app/sw.js" />
-    <entry file="file://$USER_HOME$/app/js/main.js" />
-    <entry file="file://$USER_HOME$/gulpfile.js" />
-    <entry file="file://$USER_HOME$/data/restaurants.json" />
-    <entry file="file://$USER_HOME$/Gruntfile.js" />
-    <entry file="file://$USER_HOME$/package.json" />
-    <entry file="file://$USER_HOME$/app/js/restaurant_info.js" />
-    <entry file="file://$USER_HOME$/app/scss/styles.scss" />
-    <entry file="file://$USER_HOME$/app/restaurant.html" />
-    <entry file="file://$USER_HOME$/app/sw.js" />
-    <entry file="file://$USER_HOME$/app/js/main.js" />
-    <entry file="file://$USER_HOME$/app/index.html" />
     <entry file="file://$USER_HOME$/app/js/restaurant_info.js" />
     <entry file="file://$USER_HOME$/Gruntfile.js" />
     <entry file="file://$USER_HOME$/app/scss/styles.scss" />
@@ -346,51 +358,82 @@
     <entry file="file://$USER_HOME$/app/sw.js" />
     <entry file="file://$USER_HOME$/dist/js/restaurant_info.js" />
     <entry file="file://$USER_HOME$/app/js/dbhelper.js" />
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/idb/lib/idb.js">
+    <entry file="file://$PROJECT_DIR$/../node_modules/idb/lib/idb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="305" column="5" lean-forward="true" selection-end-line="316" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/idb-promised.js">
+    <entry file="file://$PROJECT_DIR$/../dist/sw.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/js/idb-promised.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="43" column="48" selection-start-line="43" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/restaurant.html">
+    <entry file="file://$PROJECT_DIR$/../app/restaurant.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="65" column="90" selection-start-line="65" selection-start-column="90" selection-end-line="65" selection-end-column="90" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/dbhelper.js">
+    <entry file="file://$PROJECT_DIR$/../app/js/restaurant_info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        <state relative-caret-position="342">
+          <caret line="142" column="3" lean-forward="true" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
+          <folding>
+            <element signature="e#9#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/sw.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sw.js">
+    <entry file="file://$PROJECT_DIR$/../data/restaurants.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="216">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/js/dbhelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#9#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>

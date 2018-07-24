@@ -1,4 +1,4 @@
-const staticCacheName = 'restaurant-static-006';
+const staticCacheName = 'restaurant-static-010';
 
 
 self.addEventListener('install', event => {
@@ -6,10 +6,11 @@ self.addEventListener('install', event => {
     caches.open(staticCacheName)
       .then(cache => {
         return cache.addAll([
-          '/index.html',
+          '/',
           '/css/styles.css',
           '/js/dbhelper.js',
           '/js/main.js',
+          'js/idb-promised.js',
           '/js/restaurant_info.js',
           '/restaurant.html?id=1',
           '/restaurant.html?id=2',
