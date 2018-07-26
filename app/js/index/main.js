@@ -8,10 +8,7 @@ var markers = [];
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  lazyLoadImages();
-  initMap(); // added 
-  fetchNeighborhoods();
-  fetchCuisines();
+  initMap(); // added
 });
 
 /**
@@ -25,8 +22,8 @@ lazyLoadImages = () => {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.src = lazyImage.dataSrc;
+          lazyImage.srcset = lazyImage.dataSrcset;
           lazyImage.classList.remove("lazy");
           lazyImageObserver.unobserve(lazyImage);
         }
@@ -38,6 +35,15 @@ lazyLoadImages = () => {
     });
   }
 }
+
+/**
+ * Lazy Load
+ */
+window.onload = () => {
+  fetchCuisines();
+  fetchNeighborhoods();
+  lazyLoadImages();
+};
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -146,6 +152,7 @@ updateRestaurants = () => {
     } else {
       resetRestaurants(restaurants);
       fillRestaurantsHTML();
+      lazyLoadImages();
     }
   })
 }
@@ -185,9 +192,10 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
-  image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.srcset = DBHelper.imageSrcsetForIndex(restaurant);
+  image.className = 'restaurant-img lazy';
+  image.src = '/img/blur.jpg';
+  image.dataSrc = DBHelper.imageUrlForRestaurant(restaurant);
+  image.dataSrcset = DBHelper.imageSrcsetForIndex(restaurant);
   image.sizes = "300px";
   const altText = restaurant.name + ' restaurant in ' + restaurant.neighborhood;
   image.title = altText;

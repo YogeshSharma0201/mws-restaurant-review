@@ -18,9 +18,34 @@ class DBHelper {
   }
 
   /**
-   * Fetch all restaurants.
+   * Fetch from idb or network
    */
   static fetchRestaurants(callback) {
+    let dbPromise = idb.open('restaurants', 1, function (upgradeDB) {
+      let restuarantStore = upgradeDB.createObjectStore('restaurants', {
+        keyPath: 'id'
+      });
+    });
+
+    dbPromise.then(function (db) {
+      let tx = db.transaction('restaurants');
+      let keyValStore = tx.objectStore('restaurants');
+      return keyValStore.getAll();
+    }).then(function (val) {
+      // console.log(val);
+      if(val.length !== 0)
+        callback(null, val);
+      else throw "no value stored";
+    }).catch( (err) => {
+      console.log(err);
+      DBHelper.fetchRestaurantsFromNetwork(callback);
+    });
+  }
+
+  /**
+   * Fetch all restaurants from network.
+   */
+  static fetchRestaurantsFromNetwork(callback) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', DBHelper.RESTAURANT_URL);
     xhr.onload = () => {
@@ -37,11 +62,7 @@ class DBHelper {
           };
         });
 
-        let dbPromise = idb.open('restaurants', 1, function (upgradeDB) {
-          let restuarantStore = upgradeDB.createObjectStore('restaurants', {
-            keyPath: 'id'
-          });
-        });
+        let dbPromise = idb.open('restaurants', 1);
 
         DBHelper.fetchReviews((err, reviews) => {
           // console.log(reviews);
@@ -84,33 +105,12 @@ class DBHelper {
             console.log('tx complete');
           });
 
-          // dbPromise.then(function (db) {
-          //   let tx = db.transaction('restaurants');
-          //   let keyValStore = tx.objectStore('restaurants');
-          //   console.log(keyValStore);
-          //   return keyValStore.get('hello');
-          // }).then(function (val) {
-          //   console.log(val);
-          // });
-
           callback(null, restaurants);
 
         });
 
       } else { // Oops!. Got an error from server.
         const error = (`Request failed. Returned status of ${xhr.status}`);
-
-        let dbPromise = idb.open('restaurants', 1);
-
-        dbPromise.then(function (db) {
-          let tx = db.transaction('restaurants');
-          let keyValStore = tx.objectStore('restaurants');
-          console.log(keyValStore);
-          return keyValStore.getAll();
-        }).then(function (val) {
-          callback(null, val);
-        });
-
         callback(error, null);
       }
     };

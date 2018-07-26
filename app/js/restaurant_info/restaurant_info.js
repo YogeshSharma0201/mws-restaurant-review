@@ -9,6 +9,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 /**
+ * Lazy load Images
+ */
+lazyLoadImages = () => {
+  console.log('loaded');
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  console.log(lazyImages);
+
+  if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataSrc;
+          lazyImage.srcset = lazyImage.dataSrcset;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
+}
+
+/**
+ * Lazy Load
+ */
+window.onload = lazyLoadImages;
+
+/**
  * Initialize leaflet map
  */
 initMap = () => {
@@ -87,9 +119,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.srcset = DBHelper.imageSrcsetForRestaurant(restaurant);
+  image.className = 'restaurant-img lazy';
+  image.src = '/img/blur.jpg';
+  image.dataSrc = DBHelper.imageUrlForRestaurant(restaurant);
+  image.dataSrcset = DBHelper.imageSrcsetForRestaurant(restaurant);
   image.sizes = "(max-width: 320px) 300px, (max-width: 425px) 400px, (max-width: 635px) 600px, 800px";
   const altText = restaurant.name + ' restaurant in ' + restaurant.neighborhood;
   image.title = altText;
