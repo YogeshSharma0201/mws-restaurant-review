@@ -2,82 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bcd7fc-b9ed-484b-ba88-fdfb2ac95cf5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/js/utils/leaflet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/scss/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/js/dbhelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/utils/dbhelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/js/idb-promised.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/utils/idb-promised.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/index/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/js/restaurant_info.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/js/restaurant_info/restaurant_info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/restaurant.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/restaurant.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app/sw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/restaurants.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/1-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/1-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/1-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/1-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/10-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/10-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/10-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/10-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/2-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/2-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/2-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/2-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/3-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/3-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/3-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/3-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/4-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/4-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/4-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/4-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/5-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/5-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/5-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/5-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/6-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/6-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/6-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/6-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/7-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/7-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/7-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/7-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/8-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/8-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/8-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/8-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/9-300.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/9-400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/9-600_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/9-800_2x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/img/no-internet-connection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/js/dbhelper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/js/idb-promised.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/js/restaurant_info.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/restaurant.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dist/sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -105,6 +31,7 @@
           <entry key="html" value="232" />
           <entry key="js" value="2019" />
           <entry key="json" value="69" />
+          <entry key="md" value="496" />
           <entry key="scss" value="15" />
         </counts>
       </usages-collector>
@@ -116,6 +43,7 @@
           <entry key="Image" value="1" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="24" />
+          <entry key="Markdown" value="1" />
           <entry key="SCSS" value="4" />
         </counts>
       </usages-collector>
@@ -126,6 +54,7 @@
           <entry key="ico" value="1" />
           <entry key="js" value="24" />
           <entry key="json" value="4" />
+          <entry key="md" value="1" />
           <entry key="scss" value="4" />
         </counts>
       </usages-collector>
@@ -134,6 +63,7 @@
           <entry key="HTML" value="232" />
           <entry key="JSON" value="69" />
           <entry key="JavaScript" value="2019" />
+          <entry key="Markdown" value="496" />
           <entry key="SCSS" value="15" />
         </counts>
       </usages-collector>
@@ -208,11 +138,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="378">
+                <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -300,6 +242,7 @@
         <option value="$PROJECT_DIR$/../app/js/index/main.js" />
         <option value="$PROJECT_DIR$/../app/sw.js" />
         <option value="$PROJECT_DIR$/../server.js" />
+        <option value="$PROJECT_DIR$/../README.md" />
       </list>
     </option>
   </component>
@@ -399,12 +342,12 @@
       <workItem from="1532519498818" duration="23000" />
       <workItem from="1532519547523" duration="53000" />
       <workItem from="1532519666754" duration="18814000" />
-      <workItem from="1532577975984" duration="8472000" />
+      <workItem from="1532577975984" duration="9682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70449000" />
+    <option name="totallyTimeSpent" value="71659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -571,6 +514,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
