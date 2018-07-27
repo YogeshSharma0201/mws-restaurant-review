@@ -12,11 +12,6 @@ class DBHelper {
     return `http://localhost:${port}/restaurants`;
   }
 
-  static get REVIEWS_URL() {
-    const port = 1337; // Change this to your server port
-    return `http://localhost:${port}/reviews`;
-  }
-
   /**
    * Fetch from idb or network
    */
@@ -64,74 +59,25 @@ class DBHelper {
 
         let dbPromise = idb.open('restaurants', 1);
 
-        DBHelper.fetchReviews((err, reviews) => {
-          // console.log(reviews);
-          if(err) console.log(err);
-
-          const months = ["January", "February", "March", "April", "May", "June", "July", "August",
-            "September", "October", "November", "December"];
-
-          restaurants = restaurants.map((restaurant) => {
-            let r = [];
-            reviews.forEach((review) => {
-              if(review.restaurant_id === restaurant.id) {
-                let date = new Date(review.createdAt);
-                r = [
-                  {
-                    name : review.name,
-                    rating: review.rating,
-                    comments: review.comments,
-                    date: `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
-                  },
-                  ...r
-                ];
-              }
-            });
-            restaurant.reviews = r;
-            // console.log(restaurant);
-            return restaurant;
+        dbPromise.then(function (db) {
+          let tx = db.transaction('restaurants', 'readwrite');
+          let keyValStore = tx.objectStore('restaurants');
+          // keyValStore.put('foo', 'bar');
+          restaurants.forEach((restaurant) => {
+            keyValStore.put(restaurant);
           });
-
-          dbPromise.then(function (db) {
-            let tx = db.transaction('restaurants', 'readwrite');
-            let keyValStore = tx.objectStore('restaurants');
-            // keyValStore.put('foo', 'bar');
-            restaurants.forEach((restaurant) => {
-              keyValStore.put(restaurant);
-            });
-
-            return tx.complete;
-          }).then(function () {
-            console.log('tx complete');
-          });
-
+          return tx.complete;
+        }).then(function () {
+          console.log('tx complete');
           callback(null, restaurants);
+        }).catch((err)=>{
+          console.log(err);
+          callback(null, restaurants);
+        })
 
-        });
 
       } else { // Oops!. Got an error from server.
         const error = (`Request failed. Returned status of ${xhr.status}`);
-        callback(error, null);
-      }
-    };
-    xhr.send();
-  }
-
-  /**
-   * Fetch all reviews
-   */
-  static fetchReviews(callback) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', DBHelper.REVIEWS_URL);
-    xhr.onload = () => {
-      if (xhr.status === 200) { // Got a success response from server!
-        const json = JSON.parse(xhr.responseText);
-        let reviews = json;
-
-        callback(null, reviews);
-      } else { // Oops!. Got an error from server.
-        const error = (`Request failed. Returned status of ${xhr.status}`);
-
         callback(error, null);
       }
     };

@@ -35,10 +35,10 @@ lazyLoadImages = () => {
   }
 }
 
-/**
- * Lazy Load
- */
-window.onload = lazyLoadImages;
+// /**
+//  * Lazy Load
+//  */
+// window.onload = lazyLoadImages;
 
 /**
  * Initialize leaflet map
@@ -103,6 +103,7 @@ fetchRestaurantFromURL = (callback) => {
         return;
       }
       fillRestaurantHTML();
+      lazyLoadImages();
       callback(null, restaurant)
     });
   }
