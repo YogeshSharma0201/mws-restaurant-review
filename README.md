@@ -1,8 +1,8 @@
 # Mobile Web Specialist Certification Course
 
 How to run this app: 
-1) $ git clone https://github.com/udacity/mws-restaurant-stage-3.git
-2) $ cd mws-restaurant-stage-3
+1) $ git clone https://github.com/udacity/mws-restaurant-stage-2.git
+2) $ cd mws-restaurant-stage-2
 3) $ npm install
 4) $ node app.js
 5) Server should be running on port 1337
@@ -12,8 +12,8 @@ How to run this app:
 9) Web app should be running on port 5000
 
 For developers:
-1) $ git clone https://github.com/udacity/mws-restaurant-stage-3.git
-2) $ cd mws-restaurant-stage-3
+1) $ git clone https://github.com/udacity/mws-restaurant-stage-2.git
+2) $ cd mws-restaurant-stage-2
 3) $ npm install
 4) $ node app.js
 5) Server should be running on port 1337
