@@ -4,7 +4,7 @@ var newMap;
 /**
  * Initialize map as soon as the page is loaded.
  */
-document.addEventListener('DOMContentLoaded', (event) => {  
+document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
 });
 
@@ -47,7 +47,7 @@ initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
-    } else {      
+    } else {
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
@@ -59,14 +59,14 @@ initMap = () => {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
           'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox.streets'    
+        id: 'mapbox.streets'
       }).addTo(newMap);
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
-}  
- 
+}
+
 /* window.initMap = () => {
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
@@ -115,6 +115,14 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+
+  const like = document.getElementById('restaurant-like');
+  console.log(restaurant.is_favorite);
+  if(restaurant.is_favorite === false || restaurant.is_favorite === 'false') {
+    like.innerHTML = 'Like &#x1F44D;'
+  } else {
+    like.innerHTML = 'Dislike &#x1F44E;';
+  }
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -165,9 +173,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
-  title.innerHTML = 'Reviews';
-  container.appendChild(title);
+  // const title = document.createElement('h2');
+  // title.innerHTML = 'Reviews';
+  // container.appendChild(title);
 
   if (!reviews) {
     const noReviews = document.createElement('p');
@@ -192,7 +200,10 @@ createReviewHTML = (review) => {
   li.appendChild(name);
 
   const date = document.createElement('p');
-  date.innerHTML = review.date;
+  let _Date = new Date(review.createdAt);
+  let Month = ['Jan','Feb','March','April','May','Jun','July','Aug','Sept','Oct','Nov','Dec'];
+  date.innerHTML = `${_Date.getDate()} ${Month[_Date.getMonth()]} ${_Date.getFullYear()}`;
+  console.log(_Date, `${_Date.getDate()} ${Month[_Date.getMonth()]} ${_Date.getFullYear()}`);
   li.appendChild(date);
 
   const rating = document.createElement('p');
@@ -230,4 +241,55 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
+};
+
+likeHandler = async () => {
+  const like = document.getElementById('restaurant-like');
+  const id = parseInt(location.search.slice(4));
+  let res, type;
+  console.log(like.innerHTML.includes('Like'));
+  if(like.innerHTML.includes('Like')) {
+    type='true';
+  } else {
+    type='false';
+  }
+  res = await fetch(`http://localhost:1337/restaurants/2/?is_favorite=${type}`, {
+    method: 'put',
+  });
+  const json = await res.json();
+  console.log(json, type);
+  if(json.is_favorite === 'false' || json.is_favorite=== false) {
+    like.innerHTML = 'Like &#x1F44D;'
+  } else {
+    like.innerHTML = 'Dislike &#x1F44E;';
+  }
+};
+
+closeModal = () => {
+  const modal = document.getElementById('form-modal-out');
+  modal.style.display = 'none';
+};
+
+openModal = () => {
+  const modal = document.getElementById('form-modal-out');
+  modal.style.display = 'block';
+};
+
+submitReview = (e) => {
+  e.preventDefault();
+  // console.log(e);
+  const name = e.target["name"].value;
+  const rating = e.target["rating"].value;
+  const comments = e.target["comments"].value;
+  // console.log(name, rating, comments);
+  fetch('http://localhost:1337/reviews/', {
+    method: 'post',
+    contentType: 'json',
+    body: {
+
+    }
+  })
+  const modal = document.getElementById('form-modal-out');
+  modal.style.display = 'none';
+  return false;
+};

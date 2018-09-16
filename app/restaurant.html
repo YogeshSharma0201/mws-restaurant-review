@@ -41,7 +41,10 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container" aria-labelledby="restaurant-name">
-      <h1 id="restaurant-name"></h1>
+      <div id="restaurant-name-out">
+        <h1 id="restaurant-name"></h1>
+        <button id="restaurant-like" onClick="likeHandler()"></button>
+      </div>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
@@ -50,8 +53,46 @@
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container" aria-label="Reviews">
+      <div id="review-out">
+        <h2>Reviews</h2>
+        <button onClick="openModal()">Add a Review</button>
+      </div>
       <ul id="reviews-list"></ul>
     </section>
+
+    <div id="form-modal-out" style="display: none">
+      <div id="form-modal">
+        <div id="form-modal-head">
+          Reviews
+          <div onClick="closeModal()" id="cross">&#x2716;</div>
+        </div>
+        <div id="form-modal-body">
+          <form onsubmit="return submitReview(event)">
+            <div>
+              <label for="reviewer_name">Name</label>
+              <input type="text" name="name" id="reviewer_name">
+            </div>
+            <div>
+              <label for="rating">Rating</label>
+              <select id="rating" name="rating">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div>
+              <label for="comments">Comments</label>
+              <textarea name="comments" id="comments"></textarea>
+            </div>
+            <div>
+              <input type="submit" id="submit-review">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- End reviews -->
   </main>
   <!-- End main -->

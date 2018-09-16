@@ -166,6 +166,47 @@ nav h1 a:hover {
     overflow: hidden;
 }
 /* ====================== Restaurant Listing ====================== */
+#restaurant-name-out {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    height: 35px;
+    margin-top: 9px;
+    font-size: 18px;
+    min-width: 100px;
+    background-color: #2196f3;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1769aa;
+    }
+  }
+}
+#review-out {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+
+  button {
+    height: 35px;
+    margin-top: 9px;
+    font-size: 18px;
+    min-width: 100px;
+    background-color: #2196f3;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1769aa;
+    }
+  }
+}
 #restaurants-list {
     background-color: #f3f3f3;
     list-style: outside none none;
@@ -242,6 +283,79 @@ nav h1 a:hover {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+}
+#form-modal-out {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+
+  #form-modal {
+    position: fixed;
+    height: 330px;
+    width: 600px;
+    background-color: white;
+    top: 15%;
+    left: 30%;
+    z-index: 1000;
+
+    #form-modal-head {
+      height: 60px;
+      padding-top: 16px;
+      text-align: center;
+      background-color: #1769aa;
+      font-size: 22px;
+      color: #fff;
+
+      #cross {
+        display: inline;
+        float: right;
+        padding-right: 15px;
+        margin-top: 2px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    #form-modal-body {
+      form {
+        text-align: center;
+        width: 80%;
+        margin-top: 30px;
+        margin-left: 10%;
+        div {
+          margin-bottom: 15px;
+          display: flex;
+          justify-content: space-between;
+        }
+        #reviewer_name {
+          width: 60%;
+        }
+        #rating {
+          width: 60%;
+          background-color: white;
+        }
+        #submit-review {
+          margin: 0 auto;
+          height: 35px;
+          width: 100px;
+          background-color: blue;
+          color: white;
+          border: 0;
+          border-radius: 4px;
+          font-size: 18px;
+        }
+        #comments {
+          height: 90px;
+          resize: none;
+          width: 60%;
+        }
+      }
+    }
+  }
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -331,8 +445,12 @@ nav h1 a:hover {
     }
 }
 
+#reviews-container {
+  padding-top: 20px;
+}
+
 #reviews-container h2 {
-    margin-top: 29px;
+    margin-top: 10px;
     color: #a25b06;
     font-weight: 300;
     letter-spacing: -1px;
@@ -382,6 +500,16 @@ nav h1 a:hover {
     }
     #reviews-container h2 {
         margin: 0 0 10px;
+    }
+    #restaurant-name-out {
+      button {
+        margin-top: 0;
+      }
+    }
+    #review-out {
+      button {
+        margin-top: 0;
+      }
     }
 }
 

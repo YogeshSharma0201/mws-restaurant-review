@@ -12,6 +12,11 @@ class DBHelper {
     return `http://localhost:${port}/restaurants`;
   }
 
+  static get RESTAURANT_REVIEWS_URL() {
+    const port = 1337; // Change this to your server port
+    return `http://localhost:${port}/reviews`;
+  }
+
   /**
    * Fetch from idb or network
    */
@@ -43,19 +48,25 @@ class DBHelper {
   static fetchRestaurantsFromNetwork(callback) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', DBHelper.RESTAURANT_URL);
-    xhr.onload = () => {
+    xhr.onload = async () => {
       if (xhr.status === 200) { // Got a success response from server!
         const json = JSON.parse(xhr.responseText);
         let restaurants = json;
+        let reviewsPromise = await fetch(DBHelper.RESTAURANT_REVIEWS_URL);
+        let reviews = await reviewsPromise.json();
+        console.log(reviews);
         restaurants = restaurants.map((restaurant) => {
           const id = restaurant.id;
           return {
             ...restaurant,
+            reviews: reviews.filter((review) => review.restaurant_id === id),
             photograph: `${id}-300.jpg`,
             srcset_index: `img/${id}-300.jpg 1x, img/${id}-600_2x.jpg 2x`,
             srcset_restaurant: `img/${id}-300.jpg 300w, img/${id}-400.jpg 400w, img/${id}-600_2x.jpg 600w, img/${id}-800_2x.jpg 800w`
           };
         });
+
+        console.log(restaurants);
 
         let dbPromise = idb.open('restaurants', 1);
 
@@ -224,7 +235,7 @@ class DBHelper {
    * Map marker for a restaurant.
    */
    static mapMarkerForRestaurant(restaurant, map) {
-    // https://leafletjs.com/reference-1.3.0.html#marker  
+    // https://leafletjs.com/reference-1.3.0.html#marker
     const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
       {title: restaurant.name,
       alt: restaurant.name,
@@ -232,7 +243,7 @@ class DBHelper {
       })
       marker.addTo(newMap);
     return marker;
-  } 
+  }
   /* static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
