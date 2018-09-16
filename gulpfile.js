@@ -63,7 +63,7 @@ gulp.task('sass', function() {
 gulp.task('index_js', function() {
   return gulp.src(["app/js/index/*.js", "app/js/utils/*.js"])
     .pipe(concat('main.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gzip({ append: true }))
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());
@@ -72,7 +72,7 @@ gulp.task('index_js', function() {
 gulp.task('restaurant_js', function() {
   return gulp.src(["app/js/restaurant_info/*.js", "app/js/utils/*.js"])
     .pipe(concat('restaurant.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gzip({ append: true }))
     .pipe(gulp.dest("dist/js"))
     .pipe(browserSync.stream());

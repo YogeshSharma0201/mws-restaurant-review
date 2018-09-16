@@ -6,6 +6,7 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
+  DBHelper.submitPendingReviews();
 });
 
 /**
@@ -253,7 +254,7 @@ likeHandler = async () => {
   } else {
     type='false';
   }
-  res = await fetch(`http://localhost:1337/restaurants/2/?is_favorite=${type}`, {
+  res = await fetch(`${DBHelper.RESTAURANT_URL}/${id}/?is_favorite=${type}`, {
     method: 'put',
   });
   const json = await res.json();
@@ -263,6 +264,7 @@ likeHandler = async () => {
   } else {
     like.innerHTML = 'Dislike &#x1F44E;';
   }
+
 };
 
 closeModal = () => {
@@ -281,15 +283,85 @@ submitReview = (e) => {
   const name = e.target["name"].value;
   const rating = e.target["rating"].value;
   const comments = e.target["comments"].value;
+  const id = parseInt(location.search.slice(4));
   // console.log(name, rating, comments);
+
+  const reviewHtml = createReviewHTML({
+    name,
+    rating,
+    comments,
+    createdAt: (new Date()).getTime(),
+  });
+  const ul = document.getElementById('reviews-list');
+  ul.appendChild(reviewHtml);
+  let reviewObj = {
+    restaurant_id: id,
+    name,
+    rating,
+    comments,
+  };
+  addToidb(reviewObj);
+  previews = [];
+  let pendingReviews = localStorage.getItem('pendingReviews');
+  if(pendingReviews) {
+    pendingReviews = JSON.parse(pendingReviews);
+    previews = [
+      ...pendingReviews
+    ]
+  }
+  previews.push(reviewObj);
+  localStorage.setItem('pendingReviews', JSON.stringify(previews));
   fetch('http://localhost:1337/reviews/', {
     method: 'post',
     contentType: 'json',
-    body: {
+    body: JSON.stringify(reviewObj)
+  }).then(res=>res.json())
+    .then(res=>console.log(res))
+    .catch((err)=>{
+      alert('Not connected to internet! Review will be sent once connected...');
+      DBHelper.submitOffline([reviewObj]);
+    });
 
-    }
-  })
+  e.target["name"].value = '';
+  e.target["rating"].value = 1;
+  e.target["comments"].value = '';
   const modal = document.getElementById('form-modal-out');
   modal.style.display = 'none';
   return false;
+};
+
+addToidb = (reviewObj) => {
+  reviewObj = {
+    ...reviewObj,
+    createdAt: (new Date()).getTime()
+  };
+
+  let dbPromise = idb.open('restaurants', 1);
+
+  dbPromise.then(function (db) {
+    let tx = db.transaction('restaurants');
+    let keyValStore = tx.objectStore('restaurants');
+    return keyValStore.get(reviewObj.restaurant_id);
+  }).then(function (val) {
+    console.log(val);
+    let DbPromise = idb.open('restaurants', 1);
+
+    DbPromise.then(function (db) {
+      let tx = db.transaction('restaurants', 'readwrite');
+      let keyValStore = tx.objectStore('restaurants');
+      keyValStore.put({
+        ...val,
+        reviews: [...val.reviews, reviewObj],
+      });
+      return tx.complete;
+    }).then(function () {
+      console.log('tx complete...');
+    }).catch((err)=>{
+      console.log(err);
+    })
+
+  }).catch( (err) => {
+    console.log(err);
+  });
+
 };
