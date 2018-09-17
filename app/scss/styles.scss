@@ -297,10 +297,10 @@ nav h1 a:hover {
   #form-modal {
     position: fixed;
     height: 330px;
-    width: 600px;
+    left: 30%;
+    width: 40%;
     background-color: white;
     top: 15%;
-    left: 30%;
     z-index: 1000;
 
     #form-modal-head {
@@ -429,12 +429,65 @@ nav h1 a:hover {
     #reviews-container {
         width: 55%;
     }
+    #form-modal-out {
+      #form-modal {
+        left: 20%;
+        width: 60%;
+      }
+    }
+
 }
 
 @media screen and (max-width: 768px) {
     #restaurant-container, #reviews-container {
         width: 50%;
     }
+    #form-modal-out {
+      #form-modal {
+        left: 10%;
+        width: 80%;
+      }
+    }
+}
+
+@media screen and (max-width: 640px) {
+  #form-modal-out {
+    #form-modal {
+      left: 5%;
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #form-modal-out {
+    #form-modal {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      #submit-review {
+        position: absolute;
+        bottom: 5%;
+        left: 35%;
+        width: 30%;
+      }
+      #form-modal-body {
+        form {
+          div {
+            flex-direction: column;
+            text-align: left;
+          }
+          #reviewer_name, #rating, #comments {
+            width: 100% !important;
+          }
+          #rating {
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 425px) {
