@@ -311,7 +311,7 @@ submitReview = (e) => {
   }
   previews.push(reviewObj);
   localStorage.setItem('pendingReviews', JSON.stringify(previews));
-  fetch('http://localhost:1337/reviews/', {
+  fetch('http://restaurants-server.herokuapp.com/reviews', {
     method: 'post',
     contentType: 'json',
     body: JSON.stringify(reviewObj)
