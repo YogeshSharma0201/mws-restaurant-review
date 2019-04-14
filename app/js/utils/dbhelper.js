@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get RESTAURANT_URL() {
     const port = 1337; // Change this to your server port
-    return `http://restaurants-server.herokuapp.com/restaurants`;
+    return `https://restaurants-server.herokuapp.com/restaurants`;
   }
 
   static get RESTAURANT_REVIEWS_URL() {
