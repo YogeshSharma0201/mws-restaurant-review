@@ -9,12 +9,12 @@ class DBHelper {
    */
   static get RESTAURANT_URL() {
     const port = 1337; // Change this to your server port
-    return `http://ec2-3-218-93-91.compute-1.amazonaws.com:1337/restaurants`;
+    return `http://104.154.154.130:1337/restaurants`;
   }
 
   static get RESTAURANT_REVIEWS_URL() {
     const port = 1337; // Change this to your server port
-    return `http://ec2-3-218-93-91.compute-1.amazonaws.com:1337/reviews`;
+    return `http://104.154.154.130:1337/reviews`;
   }
 
   /**

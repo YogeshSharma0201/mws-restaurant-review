@@ -311,7 +311,7 @@ submitReview = (e) => {
   }
   previews.push(reviewObj);
   localStorage.setItem('pendingReviews', JSON.stringify(previews));
-  fetch('http://ec2-3-218-93-91.compute-1.amazonaws.com:1337/reviews', {
+  fetch('http://104.154.154.130:1337/reviews', {
     method: 'post',
     contentType: 'json',
     body: JSON.stringify(reviewObj)
