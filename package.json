@@ -21,7 +21,7 @@
   "dependencies": {
     "browser-sync": "^2.24.6",
     "compression": "^1.7.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "grunt-responsive-images": "^1.10.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
